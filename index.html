@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusCanteen - Food Ordering System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍔</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>CampusCanteen</h1>
+                </div>
+                <div class="nav-icons">
+                    <button id="cart-icon" class="icon-button" aria-label="Shopping Cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <div class="tabs">
+                <button id="menu-tab" class="tab active">Menu</button>
+                <button id="orders-tab" class="tab">My Orders</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <section id="menu-section" class="section active">
+                <div class="search-filter">
+                    <div class="search-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <label for="search-input" class="visually-hidden">Search for food</label>
+                        <input type="text" id="search-input" placeholder="Search for food...">
+                    </div>
+                    <div class="filter-container">
+                        <label for="food-type-filter" class="visually-hidden">Filter by food type</label>
+                        <select id="food-type-filter" aria-label="Filter by food type">
+                            <option value="all">All Types</option>
+                            <option value="veg">Vegetarian</option>
+                            <option value="non-veg">Non-Vegetarian</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="category-tabs" id="category-tabs">
+                </div>
+                <div class="menu-grid" id="menu-items">
+                </div>
+            </section>
+            <section id="cart-section" class="section">
+                <div class="cart-container">
+                    <h2>Your Cart</h2>
+                    <div id="cart-items" class="cart-items">
+                    </div>
+                    <div id="empty-cart" class="empty-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="8" cy="21" r="1"></circle>
+                            <circle cx="19" cy="21" r="1"></circle>
+                            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                        </svg>
+                        <p>Your cart is empty</p>
+                        <button id="browse-menu-btn" class="primary-button">Browse Menu</button>
+                    </div>
+                    <div id="cart-summary" class="cart-summary">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">₹0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Campus Fees:</span>
+                            <span>₹0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="total">₹0.00</span>
+                        </div>
+                        <button id="place-order-btn" class="primary-button full-width">Place Order</button>
+                    </div>
+                </div>
+            </section>
+            <section id="orders-section" class="section">
+                <h2>My Orders</h2>
+                <div id="orders-list" class="orders-list">
+                </div>
+                <div id="empty-orders" class="empty-orders">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <p>No orders found</p>
+                    <button id="browse-menu-btn-orders" class="primary-button">Browse Menu</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div id="notification" class="notification hidden">
+        <div class="notification-content">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="notification-icon">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <span id="notification-message">Notification message</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
