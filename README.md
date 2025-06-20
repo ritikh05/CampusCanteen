@@ -1,39 +1,35 @@
 # 🍔 CampusCanteen – Smart Campus Food Ordering System
 
 ## 📘 Description
-**CampusCanteen** is a smart, responsive web-based food ordering and management system designed for college campus canteens. It allows students to browse menus, place orders, and track them in real-time, while admins manage item listings — all through a smooth interface backed by a local database.
+**CampusCanteen** is a lightweight and responsive food ordering system tailored for college campus canteens. It enables students to browse menus, place orders, and track them easily. Designed with simplicity in mind, it uses a local database and intuitive UI to streamline food ordering.
 
 ---
 
 ## 🚀 Features
 
 - 🔐 User Authentication (Sign In / Sign Up)
-- 🧾 View full canteen menu
-- 🛒 Add items to cart and place orders
-- 📦 Admin panel to add, remove, or update food items
-- 🕓 Real-time order tracking (status updates)
-- 💽 Local database used to store menu and orders
-- 📱 Responsive UI for students and admins
+- 🧾 Menu browsing and item selection
+- 🛒 Cart system for placing orders
+- 📦 Order confirmation and local data storage
+- 👨‍🍳 Admin logic (if extended) for managing items
+- 📱 Fully responsive and user-friendly design
 
 ---
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Node.js (local server scripts)  
-- **Database**: Local JSON or file-based storage  
-- **Authentication**: Custom Login/Signup system
-
----
+- **Backend**: *(Optional Node.js for local storage logic)*  
+- **Database**: Local file/JSON-based system
 
 ---
 
 ## 📦 Setup Instructions
 
 ### 🔧 Prerequisites
-- A modern web browser
-- Node.js installed (if using backend logic)
-- Optional: Python for running static server
+- Any modern browser
+- *(Optional)* Node.js if backend is involved
+- *(Optional)* Local server like Live Server or Python
 
 ### ▶️ Run the Application
 
@@ -41,20 +37,9 @@
 # 1. Clone the repository
 git clone https://github.com/your-username/CampusCanteen.git
 
-# 2. Navigate into the project
-cd CampusCanteen
+# 2. Open index.html in your browser to get started
 
-# 3. Install backend dependencies (if any)
-npm install
-
-# 4. Start backend server (if using Node.js)
-node server.js
-
-# 5. Open signin.html or signup.html to begin
-# After login, user lands on index.html to place orders
-# Admin accesses admin.html to manage menu
-
-# Optional: Use Python server for static files
+# Optional: Run a local server
 python -m http.server
 ```
 
@@ -62,18 +47,18 @@ python -m http.server
 
 ## 💡 Future Enhancements
 
-- Online payment integration (e.g., UPI or wallet)
-- Mobile version (PWA or app)
-- Live order status with sockets
-- Notifications or SMS confirmation
-- Analytics dashboard for admin
+- Online payment support (UPI, wallet)
+- Admin panel with item analytics
+- SMS or email order confirmation
+- Real-time queue management
+- Progressive Web App (PWA) support
 
 ---
 
 ## 📄 License
 
 This project is licensed under the **MIT License**.  
-You are free to use, improve, and build upon it.
+Free to use, enhance, and deploy.
 
 ---
 
@@ -81,3 +66,4 @@ You are free to use, improve, and build upon it.
 
 **Ritikh**  
 *Final-year CSE Student | Full Stack Developer | UI/UX Specialist*
+
